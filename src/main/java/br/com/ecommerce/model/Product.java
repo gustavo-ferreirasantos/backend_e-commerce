@@ -14,6 +14,7 @@ import java.util.UUID;
 @AllArgsConstructor
 @EqualsAndHashCode(of = "id")
 @Entity(name = "product")
+@Table(name = "product", schema = "ecommerce")
 public class Product {
 
     @Id @GeneratedValue(strategy = GenerationType.UUID)
