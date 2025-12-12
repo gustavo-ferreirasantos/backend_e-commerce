@@ -1,0 +1,32 @@
+services:
+  api:
+    build: .
+    image: ecommerce:latest
+    environment:
+      DB_URL: jdbc:postgresql://host.docker.internal:5432/ecommerce
+      DB_USER: postgres
+      DB_PASSWORD: root
+    ports:
+      - "8080:8080"
+
+
+
+#services:
+#  api:
+#    build: .
+#    image: ecommerce:latest
+#    environment:
+#      DB_URL: jdbc:postgresql://db:5432/ecommerce
+#      DB_USER: postgres
+#      DB_PASSWORD: root
+#    depends_on:
+#      - db
+#    ports:
+#      - "8080:8080"
+#  db:
+#    image: postgres:18
+#    environment:
+#      POSTGRES_PASSWORD: root
+#      POSTGRES_DB: ecommerce
+#    ports:
+#      - "5432:5432"
