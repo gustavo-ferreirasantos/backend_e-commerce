@@ -1,0 +1,19 @@
+services:
+  api:
+    build: .
+    image: ecommerce:latest
+    environment:
+      DB_URL: jdbc:postgresql://dpg-d4qrt17diees739g7f3g-a.oregon-postgres.render.com:5432/database_nxxf
+      DB_USER: user
+      DB_PASSWORD: XpGo963cfJDA5g1vavHdIX0PZ4HYP4tO
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
+  db:
+    image: postgres:18
+    environment:
+      POSTGRES_PASSWORD: XpGo963cfJDA5g1vavHdIX0PZ4HYP4tO
+      POSTGRES_DB: database_nxxf
+    ports:
+      - "5432:5432"
