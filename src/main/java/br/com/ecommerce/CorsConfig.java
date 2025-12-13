@@ -14,22 +14,12 @@ public class CorsConfig {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/**")
-                        .allowedOrigins("*")
+                        .allowedOriginPatterns("*") // aceita qualquer origem
                         .allowedMethods("*")
                         .allowedHeaders("*")
                         .allowCredentials(true);
             }
 
-
-//            public void addCorsMappings(CorsRegistry registry) {
-//                registry.addMapping("/**")
-//                        .allowedOriginPatterns("*") // aceita qualquer origem
-//                        .allowedMethods("*")
-//                        .allowedHeaders("*")
-//                        .allowCredentials(true);
-//            }
-
-            
         };
     }
 }
