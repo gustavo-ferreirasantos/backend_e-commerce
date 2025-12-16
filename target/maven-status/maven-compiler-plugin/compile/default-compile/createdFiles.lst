@@ -1,0 +1,8 @@
+br\com\ecommerce\model\Product.class
+br\com\ecommerce\controller\ProductController.class
+br\com\ecommerce\DTO\ProductResponseDTO.class
+br\com\ecommerce\CorsConfig$1.class
+br\com\ecommerce\repository\ProductRepository.class
+br\com\ecommerce\DTO\ProductRequestDTO.class
+br\com\ecommerce\ECommerceApplication.class
+br\com\ecommerce\CorsConfig.class

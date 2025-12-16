@@ -15,7 +15,6 @@ import java.util.UUID;
 
 import static org.springframework.data.jpa.domain.AbstractPersistable_.id;
 
-
 @RestController
 @RequestMapping("/product")
 public class ProductController {
