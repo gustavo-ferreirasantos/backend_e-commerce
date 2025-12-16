@@ -29,6 +29,16 @@ public class ProductController {
         return productList;
     }
 
+    @GetMapping("/{id}")
+    public ProductResponseDTO getById(@PathVariable UUID id) {
+        Product product = repository.findById(id)
+                .orElseThrow(() -> new ResponseStatusException(
+                        HttpStatus.NOT_FOUND, "Produto não encontrado"
+                ));
+
+        return new ProductResponseDTO(product);
+    }
+
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public void saveProduct(@RequestBody ProductRequestDTO data){
